@@ -1,0 +1,34 @@
+{
+  "name": "devwork",
+  "version": "1.0.0",
+  "description": "Job site mainly for recruiters to publish job offers for Developers",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdgardoPinto-Escalier/devwork.git"
+  },
+  "keywords": [
+    "Devs",
+    "Developers",
+    "Job",
+    "Work",
+    "Job",
+    "Site"
+  ],
+  "author": "Edgardo Pinto-Escalier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EdgardoPinto-Escalier/devwork/issues"
+  },
+  "homepage": "https://github.com/EdgardoPinto-Escalier/devwork#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
