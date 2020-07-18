@@ -6,3 +6,6 @@ mongoose.connect(process.env.DATABASE, {useNewUrlParser:true, useUnifiedTopology
 mongoose.connection.on('error', (error) => {
   console.log(error);
 });
+
+// Import models here
+require('../models/Vacancies');
