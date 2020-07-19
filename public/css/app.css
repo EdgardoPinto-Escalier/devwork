@@ -26,7 +26,7 @@ p {
     font-size: 1.6rem;
 }
 /** Global Styles **/
-h1, h2, h3, .main-title  {
+h1, h2, h3 {
     color: var(--typo);
     margin: 0;
 }
@@ -39,6 +39,11 @@ h2 {
     font-size: 3rem;
     text-transform: uppercase;
 }
+
+h2.job-list-title {
+    margin-bottom: 1.5rem;
+}
+
 h3 {
     font-size: 2.8rem;
 }
@@ -52,11 +57,53 @@ h3 {
     border-bottom: 1px solid var(--light-grey);
 }
 
+h1 span.main-title {
+    color: var(--typo);
+}
+
+/** Material Design Icons **/
+.material-icons.logo {
+    font-size: 6rem;
+    vertical-align: middle;
+    margin-bottom: 5px;
+    color: var(--blue-darken-2);
+}
+
+.material-icons.publish {
+    vertical-align: middle;
+    margin-bottom: 5px;
+}
+
+.material-icons.joblist {
+    font-size: 3.5rem;
+    vertical-align: middle;
+    margin-bottom: 5px;
+    color: var(--blue-darken-3);
+}
+
+.material-icons.info {
+    font-size: 2.5rem;
+    vertical-align: middle;
+    margin-bottom: 5px;
+    color: var(--blue-darken-3);
+}
+
+.material-icons.job {
+    font-size: 3rem;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.material-icons.location {
+    font-size: 3rem;
+    vertical-align: middle;
+    margin-bottom: 5px;
+}
+
 /** Buttons **/
 .btn {
     font-size: 1.8rem;
-    padding: 1rem 1rem;
-    border-radius: .6rem;
+    padding: 1rem 1rem;   
     color: var(--white);
     font-weight: bold;
     text-transform: uppercase;
@@ -68,7 +115,8 @@ h3 {
 .btn-info {
     background-color: var(--white);
     color: var(--typo);
-    border: 2px solid var(--typo);
+    border: 2px solid var(--grey);
+    padding: .5rem 1rem; 
 }
 /*.btn-info:hover {
     background-color: var(--blue-darken-1);
@@ -116,12 +164,12 @@ h3 {
 .site-name {
     display: flex;
     justify-content: space-between;
+    padding-top: 1.5rem;
 }
 .site-name a {
     text-decoration: none;
 }
 .search-bar {
-    padding-top: 1.5rem;
     display: flex;
     justify-content: flex-end;
     flex: 1;
@@ -136,9 +184,6 @@ h3 {
     }
 }
 
-input {
-    border: 2px solid var(--typo);
-}
 .search-bar input[type="text"] {
     background-color: var(--grey);
     width: 100%;
@@ -159,7 +204,7 @@ input {
     top: 10px;
     background-image: url(../img/lupa.png);
     background-color: transparent;
-    border: none;
+    border: none !important;
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: center center;
@@ -168,6 +213,9 @@ input {
     cursor: pointer;
 }
 .search-bar input[type="submit"]:active {
+    border: 1px solid red;
+}
+.search-bar input[type="submit"]:visited {
     border: none;
 }
 
@@ -284,9 +332,6 @@ p.name,
     color: white;
     font-size: 1.8rem;
 }
-.send-data form {
-
-}
 
 /** Iniciar Sesión **/
 .default-form {
@@ -388,17 +433,21 @@ trix-toolbar .trix-button--icon-strike {
     color: var(--typo);
     flex: 0 0 calc( 50% - 1rem);
     text-align: center;
-    /*border-radius: 1rem;*/
     height: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.skill-set  li.activo {
-    background-color: #00C897;
+.skill-set  li.active {
+    background-color: var(--blue-lighten-2);
+    border: 2px solid var(--blue-lighten-2);
+    color: var(--white);
 }
 .skill-set  li:hover {
     cursor: pointer;
+    background-color: var(--blue-darken-3);
+    color: var(--white);
+    border: 2px solid var(--blue-darken-3)
 }
 
 @media (min-width:480px) {

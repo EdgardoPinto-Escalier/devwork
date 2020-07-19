@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
   <link rel="stylesheet" href="/css/trix.css">
   <link rel="stylesheet" href="/css/app.css">
   <title>{{pageName}}</title>
@@ -11,7 +13,12 @@
 <body>
   <div class="site-name container">
     <h1>
-      <a href="/"><span class="main-title">DevWork</span></a>
+      <a href="/">
+        <i class="material-icons logo">developer_board</i>
+        <span class="main-title">
+          DevWork
+        </span>
+      </a>
     </h1>
     {{#if bar}}
       <div class="search-bar">
@@ -31,6 +38,7 @@
 
     {{#if button}}
       <a href="/job-vacancies/new"class="btn btn-blue">
+        <i class="material-icons publish">business_center</i>
         Publish new job
       </a>
     {{/if}}
@@ -40,5 +48,6 @@
     {{{body}}}
   </div>
   <script src="/js/trix.js"></script>
+  <script src="/dist/bundle.js"></script>
 </body>
 </html>
