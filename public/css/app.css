@@ -7,6 +7,7 @@
     --blue-lighten-2: #64b5f6;
     --typo: #0f1115;
     --grey: #666666;
+    --light-grey: #ededed;
 }
 
 html {
@@ -329,9 +330,8 @@ p.name,
 .default-form input[type="file"] {
     color: white;
 }
-trix-toolbar, 
-trix-editor {
-    background-color: white!important;
+trix-toolbar {
+    background-color: var(--light-grey);
 }
 trix-toolbar {
     padding: 1rem;
