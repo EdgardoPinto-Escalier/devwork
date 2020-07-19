@@ -20,7 +20,7 @@
     <div class="field">
       <label>Contract</label>
       <select name="contract">
-        <option value="" disabled selected>-- Select --</option>
+        <option value="" disabled selected>Select</option>
         <option value="freelance">Freelance</option>
         <option value="fulltime">Full-Time</option>
         <option value="parttime">Part-Time</option>
@@ -32,6 +32,15 @@
       <label>Description</label>
       <input type="hidden" id="x" name="description">
       <trix-editor input="x"></trix-editor>
+    </div>
+    <h3>Skills</h3>
+    <ul class="skill-set">
+      {{#selectSkills a}}
+      {{/selectSkills}}
+    </ul>
+
+    <div class="field center-horizontally">
+      <input type="submit" value="Publish New Job" class="btn btn-blue">
     </div>
   </form>
 </main>
