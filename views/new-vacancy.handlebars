@@ -1,0 +1,32 @@
+<main class="container">
+  <form action="/job-vacancies/new" method="POST" class="default-form">
+    <h3>General Information</h3>
+    <div class="field">
+      <label>Title</label>
+      <input type="text" name="title" placeholder="e.g. ReactJS Developer" required>
+    </div>
+    <div class="field">
+      <label>Company</label>
+      <input type="text" name="company" placeholder="Company Name" required>
+    </div>
+    <div class="field">
+      <label>Location</label>
+      <input type="text" name="location" placeholder="e.g. United States" required>
+    </div>
+    <div class="field">
+      <label>Salary</label>
+      <input type="text" name="Salary" placeholder="e.g. 150.000 USD" required>
+    </div>
+    <div class="field">
+      <label>Contract</label>
+      <select name="contract">
+        <option value="" disabled selected>-- Select --</option>
+        <option value="freelance">Freelance</option>
+        <option value="fulltime">Full-Time</option>
+        <option value="parttime">Part-Time</option>
+        <option value="remote">Remote</option>
+      </select>
+    </div>
+    <h3>Job Description</h3>
+  </form>
+</main>

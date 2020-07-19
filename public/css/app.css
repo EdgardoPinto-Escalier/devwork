@@ -6,6 +6,7 @@
     --blue-darken-1: #1e88e5;
     --blue-lighten-2: #64b5f6;
     --typo: #0f1115;
+    --grey: #666666;
 }
 
 html {
@@ -46,13 +47,13 @@ h3 {
 .divider {
     padding-bottom: 2rem;
     padding-top: .1rem;
-    border-bottom: 1px solid var(--blue-darken-3);
+    border-bottom: 1px solid var(--grey);
 }
 
 /** Buttons **/
 .btn {
     font-size: 1.8rem;
-    padding: 1.4rem 6rem;
+    padding: 1rem 1rem;
     border-radius: .6rem;
     color: var(--white);
     font-weight: 700;
@@ -63,11 +64,13 @@ h3 {
     border: none;
 }
 .btn-info {
-    background-color: var(--blue-darken-2);
+    background-color: var(--white);
+    color: var(--typo);
+    border: 2px solid var(--typo);
 }
-.btn-info:hover {
+/*.btn-info:hover {
     background-color: var(--blue-darken-1);
-}
+}*/
 
 .btn-blue {
     background-color: var(--blue-darken-2);
@@ -94,7 +97,7 @@ h3 {
 /** Header **/
 .tagline {
     font-size: 2.2rem;
-    color: #ffffff;
+    color: var(--grey);
     margin: 2rem 0 3rem 0;
 }
 
@@ -113,11 +116,10 @@ h3 {
     justify-content: space-between;
 }
 .site-name a {
-    color: white;
     text-decoration: none;
 }
 .search-bar {
-    padding-top: 1rem;
+    padding-top: 1.5rem;
     display: flex;
     justify-content: flex-end;
     flex: 1;
@@ -131,15 +133,19 @@ h3 {
         flex: 0 0 40%;
     }
 }
+
+input {
+    border: 2px solid var(--typo) !important;
+}
 .search-bar input[type="text"] {
-    background-color: rgba(255,255,255,.1);
+    background-color: var(--grey);
     width: 100%;
     border: none;
     padding: .5rem 4rem .5rem 2rem;
     height: 5rem;
-    border-radius: 1rem;
-    color: white;
-    font-size: 1.2rem;
+    border-radius: .5rem;
+    color: var(--white);
+    font-size: 1.7rem;
 }
 .search-bar input[type="submit"] {
     display: block;
@@ -158,6 +164,9 @@ h3 {
 }
 .search-bar input[type="submit"]:hover {
     cursor: pointer;
+}
+.search-bar input[type="submit"]:active {
+    border: none;
 }
 
 @media (min-width:768px) {
@@ -197,7 +206,7 @@ h3 {
 .box .position,
 .box .label {
     font-weight: bold;
-    color: var(--blue-darken-2);
+    color: var(--grey);
     font-size: 2.6rem;
     margin: 0;
     text-align: left;
@@ -297,7 +306,7 @@ p.name,
     padding-top: 1rem;
     flex: 0 0 18rem;
     font-size: 1.8rem;
-    color: white;
+    color: var(--typo);
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -313,6 +322,7 @@ p.name,
     padding: 1rem;
     font-size: 1.8rem;
     border-radius: 1rem;
+    
     border: none;
 } 
 
