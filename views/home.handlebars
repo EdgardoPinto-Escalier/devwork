@@ -5,112 +5,36 @@
     </i>
     Job List
   </h2>
-
-  <div class="job-background">
-    <div class="job-vacancy"> 
-      <img src="../img/Facebook-Logo.png" alt="" class="job-logo">
-      <div class="box">
-        <h3>Facebook</h3>
-        <p class="position">Senor ReactJS Developer</p>
+  {{#if vacancies.length}}
+    {{#each vacancies}}
+      <div class="job-background">
+        <div class="job-vacancy"> 
+          <img src="#" alt="" class="job-logo">
+          <div class="box">
+            <h3>{{company}}</h3>
+            <p class="position">{{title}}</p>
+          </div>
+          <div class="box">
+            <p class="label">
+              Location
+            </p>
+            <p class="name">{{location}}</p>
+          </div>
+          <div class="box">
+            <p class="label">
+              Contract
+            </p>
+            <p class="name contract">{{contract}}</p>
+          </div>
+          <div class="box center-vertically">
+            <a href="/job-vacancies/{{url}}" class="btn btn-info">
+              More Info
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="box">
-        <p class="label">
-          Location
-        </p>
-        <p class="name">Remote</p>
-      </div>
-      <div class="box">
-        <p class="label">
-          Contract
-        </p>
-        <p class="name contract">Full-Time</p>
-      </div>
-      <div class="box center-vertically">
-        <a href="#" class="btn btn-info">
-          More Info
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div class="job-background">
-    <div class="job-vacancy">
-      <img src="../img/Google-Logo.jpg" alt="" class="job-logo">
-      <div class="box">
-        <h3>Google</h3>
-        <p class="position">NodeJS Engineer</p>
-      </div>
-      <div class="box">
-        <p class="label">
-          Location
-        </p>
-        <p class="name">Palos Altos, CA</p>
-      </div>
-      <div class="box">
-        <p class="label">
-          Contract
-        </p>
-        <p class="name contract">Full-Time</p>
-      </div>
-      <div class="box center-vertically">
-        <a href="#" class="btn btn-info">
-          More Info
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div class="job-background">
-    <div class="job-vacancy">
-      <img src="../img/Twitter-Logo.png" alt="" class="job-logo">
-      <div class="box">
-        <h3>Twitter</h3>
-        <p class="position">Angular Developer</p>
-      </div>
-      <div class="box">
-        <p class="label">
-          Location
-        </p>
-        <p class="name">Chicago, IL</p>
-      </div>
-      <div class="box">
-        <p class="label">
-          Contract
-        </p>
-        <p class="name contract">Part-Time</p>
-      </div>
-      <div class="box center-vertically">
-        <a href="#" class="btn btn-info">
-          More Info
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div class="job-background">
-    <div class="job-vacancy">
-      <img src="../img/Netflix-Logo.png" alt="" class="job-logo">
-      <div class="box">
-        <h3>Netflix</h3>
-        <p class="position">DevOps Engineer</p>
-      </div>
-      <div class="box">
-        <p class="label">
-          Location
-        </p>
-        <p class="name">Miami, FL</p>
-      </div>
-      <div class="box">
-        <p class="label">
-          Contract
-        </p>
-        <p class="name contract">Remote</p>
-      </div>
-      <div class="box center-vertically">
-        <a href="#" class="btn btn-info">
-          More Info
-        </a>
-      </div>
-    </div>
-  </div>
+    {{/each}}
+  {{else}}
+    <p>No Job Vacancies yet</p>
+  {{/if}}
 </main>
