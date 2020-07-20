@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 require('./config/db');
+
 const express = require('express');
 const exphbs = require('express-handlebars');
 const path = require('path');
@@ -7,11 +8,17 @@ const router = require('./routes');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
+const bodyParser = require('body-parser');
 
 require('dotenv').config({ path: 'variables.env'});
 
 
 const app = express();
+
+// Enable body-parser
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+
 
 // Enable Handlebars for the template engine
 app.engine('handlebars',

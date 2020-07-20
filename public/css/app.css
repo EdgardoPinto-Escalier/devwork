@@ -32,11 +32,11 @@ h1, h2, h3 {
 }
 h1 {
     font-weight: bold;
-    font-size: 5rem;
+    font-size: 4rem;
 }
 h2 {
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-transform: uppercase;
 }
 
@@ -45,7 +45,9 @@ h2.job-list-title {
 }
 
 h3 {
-    font-size: 2.8rem;
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-top: .5em;
 }
 .container {
     max-width: 1200px;
@@ -78,6 +80,7 @@ h1 span.main-title {
     font-size: 3.5rem;
     vertical-align: middle;
     margin-bottom: 5px;
+    padding-left: 2rem;
     color: var(--blue-darken-3);
 }
 
@@ -89,9 +92,10 @@ h1 span.main-title {
 }
 
 .material-icons.job {
-    font-size: 3rem;
+    font-size: 4rem;
     vertical-align: middle;
     margin-left: 5px;
+    margin-top: 5px;
 }
 
 .material-icons.location {
@@ -116,7 +120,9 @@ h1 span.main-title {
     background-color: var(--white);
     color: var(--typo);
     border: 2px solid var(--grey);
-    padding: .5rem 1rem; 
+    padding: .33em; 
+    font-size: 1em;
+    line-height: 1;
 }
 /*.btn-info:hover {
     background-color: var(--blue-darken-1);
@@ -188,9 +194,8 @@ h1 span.main-title {
     background-color: var(--grey);
     width: 100%;
     border: none;
-    padding: .5rem 4rem .5rem 2rem;
-    height: 5rem;
-    border-radius: .5rem;
+    padding: .5rem 2rem .5rem 2rem;
+    height: 4rem;
     color: var(--white);
     font-size: 1.7rem;
 }
@@ -201,7 +206,7 @@ h1 span.main-title {
     width:30px;
     position: absolute;
     right: 10px;
-    top: 10px;
+    top: 5px;
     background-image: url(../img/lupa.png);
     background-color: transparent;
     border: none !important;
@@ -213,7 +218,7 @@ h1 span.main-title {
     cursor: pointer;
 }
 .search-bar input[type="submit"]:active {
-    border: 1px solid red;
+    
 }
 .search-bar input[type="submit"]:visited {
     border: none;
@@ -233,18 +238,34 @@ h1 span.main-title {
 }
 .job-candidate,
 .job-vacancy {
-    padding: 1rem 0;
+    padding: 0rem 0;
     border-bottom: 1px solid var(--blue-darken-3);
 }
 .job-candidate,
 .job-vacancy:last-of-type{
     border:none;
 }
+.job-background {
+    padding-left: 2rem;
+}
 .job-background:hover {
     background-color: #ededed;
 }
+.job-logo {
+    overflow: hidden;
+    width: 3em;
+    height: 3em;
+    margin-top: .5em;
+    margin-right: .2em;
+    display: inline-block;
+    vertical-align: middle;
+    object-fit: contain;
+    object-position: center;
+    border: 1px solid #dddddd;
+}
 .box {
     padding: .1rem 1rem;
+    margin: .1rem 1rem;
 }
 
 .box p {
@@ -255,9 +276,9 @@ h1 span.main-title {
 }
 .box .position,
 .box .label {
-    font-weight: bold;
-    color: var(--grey);
-    font-size: 2.6rem;
+    font-weight: 800;
+    color: var(--typo);
+    font-size: 1.2em;
     margin: 0;
     text-align: left;
 }
@@ -269,7 +290,7 @@ p.name,
     color: var(--typo);
 }
 .box .name { 
-    font-size: 2.4rem; 
+    font-size: 1.2em; 
     margin: .5rem 0; 
     text-align: left;
 }

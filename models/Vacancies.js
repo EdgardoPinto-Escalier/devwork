@@ -23,6 +23,7 @@ const vacanciesSchema = new mongoose.Schema({
     default: 0,
     trim: true,
   },
+  image: String,
   contract: {
     type: String,
     trim: true,
@@ -50,4 +51,4 @@ vacanciesSchema.pre('save', function(next) {
   next();
 })
 
-module.exports = mongoose.model("Vacancy", vacanciesSchema);
+module.exports = mongoose.model('Vacancy', vacanciesSchema);
