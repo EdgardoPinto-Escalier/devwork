@@ -19,5 +19,18 @@ exports.addNewVacancy = async (req, res) => {
   const newVacancy = await vacancy.save()
   // Re route
   res.redirect(`/job-vacancies/${newVacancy.url}`);
+}
 
+// Show one job vacancy
+exports.showVacancy = async (req, res, next) => {
+  const vacancy = await Vacancy.findOne({ url: req.params.url }).lean();
+
+  // If there are not results
+  if(!vacancy) return next();
+
+  res.render('vacancy', {
+    vacancy,
+    pageName: vacancy.title,
+    bar: true
+  })
 }

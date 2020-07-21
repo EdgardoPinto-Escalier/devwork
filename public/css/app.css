@@ -217,9 +217,7 @@ h1 span.main-title {
 .search-bar input[type="submit"]:hover {
     cursor: pointer;
 }
-.search-bar input[type="submit"]:active {
-    
-}
+
 .search-bar input[type="submit"]:visited {
     border: none;
 }
@@ -239,7 +237,7 @@ h1 span.main-title {
 .job-candidate,
 .job-vacancy {
     padding: 0rem 0;
-    border-bottom: 1px solid var(--blue-darken-3);
+    border-bottom: 1px solid var(--light-grey);
 }
 .job-candidate,
 .job-vacancy:last-of-type{
@@ -331,8 +329,8 @@ p.name,
 .job-vacancy-description h1 {
     line-height: 1.4;
 }
-.job-vacancy-description *{
-    color: white!important;
+.job-vacancy-description {
+    color: var(--typo);
     line-height: 2.2;
 }
 .skills {
@@ -341,7 +339,7 @@ p.name,
 .skills li,
 .job-vacancy-description div  {
     font-size: 1.8rem;
-    line-height: 2.4;
+    line-height: 2.2;
 }
 
 
