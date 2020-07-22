@@ -6,8 +6,7 @@ exports.showJobs = async (req, res, next) => {
   if(!vacancies) return next();
 
   res.render('home', {
-    pageName: 'DevWork',
-    greetings: 'Welcome to DevWork',
+    pageName: 'Welcome to DevWork',
     tagline: 'Search and Publish Developer Jobs',
     bar: true,
     button: true,

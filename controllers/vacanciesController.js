@@ -34,3 +34,14 @@ exports.showVacancy = async (req, res, next) => {
     bar: true
   })
 }
+
+exports.formEditVacancy = async (req, res, next) => {
+  const vacancy = await Vacancy.findOne({ url: req.params.url }).lean();
+
+  if(!vacancy) return next();
+
+  res.render('edit-vacancy', {
+    vacancy,
+    pageName: `Edit - ${vacancy.title}`
+  })
+}
