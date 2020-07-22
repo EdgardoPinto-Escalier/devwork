@@ -5,7 +5,7 @@ module.exports = {
     let html = '';
     skills.forEach(skill => {
       html += `
-        <li>${skill}</li>
+        <li ${selected.includes(skill) ? ' class="active"' : ''}>${skill}</li>
       `;
     });
     return options.fn().html = html;
