@@ -8,13 +8,16 @@ module.exports = () => {
 
   // Create new vacancies
   router.get('/job-vacancies/new', vacanciesController.formNewVacancy);
-  router.post('/job-vacancies/new', vacanciesController.addNewVacancy);
+  router.post('/job-vacancies/new', 
+    vacanciesController.addNewVacancy
+  );
 
   // Show Job Vacancy
   router.get('/job-vacancies/:url', vacanciesController.showVacancy);
 
   // Edit Job Vacancy
   router.get('/job-vacancies/edit/:url', vacanciesController.formEditVacancy);
+  router.post('/job-vacancies/edit/:url', vacanciesController.editVacancy);
 
   return router;
 }

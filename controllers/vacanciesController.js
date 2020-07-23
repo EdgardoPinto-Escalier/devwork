@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const Vacancy = mongoose.model('Vacancy');
 
+
+// Create new job vacancy
 exports.formNewVacancy = (req, res) => {
   res.render("new-vacancy", {
     pageName: "New Job Vacancy",
@@ -15,7 +17,8 @@ exports.addNewVacancy = async (req, res) => {
   //Create skills array
   vacancy.skills = req.body.skills.split(',');
   
-  // Save to the DB
+
+  // Save it to the DB
   const newVacancy = await vacancy.save()
   // Re route
   res.redirect(`/job-vacancies/${newVacancy.url}`);
@@ -35,6 +38,7 @@ exports.showVacancy = async (req, res, next) => {
   })
 }
 
+// Edit job vacancy
 exports.formEditVacancy = async (req, res, next) => {
   const vacancy = await Vacancy.findOne({ url: req.params.url }).lean();
 
@@ -45,3 +49,14 @@ exports.formEditVacancy = async (req, res, next) => {
     pageName: `Edit - ${vacancy.title}`
   })
 }
+
+exports.editVacancy = async (req, res) => {
+  const updatedVacancy = req.body;
+  updatedVacancy.skills = req.body.skills.split(',');
+  const vacancy = await Vacancy.findOneAndUpdate({ url: req.params.url }, updatedVacancy, {
+    new: true,
+    runValidators: true
+  });
+  res.redirect(`/job-vacancies/${vacancy.url}`);
+}
+

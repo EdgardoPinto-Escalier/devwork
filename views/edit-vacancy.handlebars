@@ -43,18 +43,15 @@
     </div>
 
     <div class="field">
-      <label>Logo</label>
-      <input type="file" name="image" placeholder="Company Logo">
-    </div>
-
-    <div class="field">
       <label>Contract</label>
       <select name="contract">
-        <option value="" disabled selected>Select</option>
-        <option value="freelance">Freelance</option>
-        <option value="fulltime">Full-Time</option>
-        <option value="parttime">Part-Time</option>
-        <option value="remote">Remote</option>
+        {{#contractType vacancy.contract}}
+          <option value="" disabled selected>Select</option>
+          <option value="Freelance">Freelance</option>
+          <option value="Full Time">Full Time</option>
+          <option value="Part Time">Part Time</option>
+          <option value="Remote">Remote</option>
+        {{/contractType}}
       </select>
     </div>
 
@@ -74,7 +71,7 @@
 
     <div class="field center-horizontally">
       <input type="hidden" name="skills" id="skills">
-      <input type="submit" value="Publish New Job" class="btn btn-blue">
+      <input type="submit" value="Save changes" class="btn btn-blue">
     </div>
   </form>
 </main>
